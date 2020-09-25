@@ -11,8 +11,8 @@ from sklearn.metrics import accuracy_score #评估函数
 # 导入鸢尾花数据集
 irs_data = datasets.load_iris()
 # Read Data and Xirs_target
-Xirs_data = irs_data.data 
-Xirs_target = irs_data.target
+Xirs_data = irs_data['data']
+Xirs_target = irs_data['target']
 # 对数据进行归一化处理
 X_scaled = preprocessing.scale(Xirs_data)
 # 拆分 训练集和测试集
