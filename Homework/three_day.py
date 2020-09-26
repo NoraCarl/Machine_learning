@@ -7,6 +7,10 @@ from sklearn import datasets
 from sklearn import svm
 from sklearn.model_selection import train_test_split
 
+# 防中文乱码
+plt.rcParams['font-sans-serif']=[u'SimHei']
+plt.rcParams['axes.unicode_minus']=False
+
 digits = datasets.load_digits()
 dis_data = digits['data']
 dis_target = digits['target']
