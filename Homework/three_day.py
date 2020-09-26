@@ -8,7 +8,7 @@ from sklearn import svm
 from sklearn.model_selection import train_test_split
 
 # 防中文乱码
-plt.rcParams['font-sans-serif']=[u'SimHei']
+plt.rcParams['font.sans-serif']=[u'SimHei']
 plt.rcParams['axes.unicode_minus']=False
 
 digits = datasets.load_digits()
