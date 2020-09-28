@@ -20,9 +20,9 @@ from sklearn.neighbors import KNeighborsClassifier # 从neighbors模块导入KN�
 if __name__ == "__main__":
     print('Sklearn版本:{}'.format(skl.__version__))
     bc = datasets.load_breast_cancer() # 导入医疗机构的乳腺癌数据
-    pd_bc = pd.DataFrame(bc.data, columns=bc.feature_names) # 数据集转换DataFrame
-    bc_X = bc.data  # 获取实际数据集
-    bc_y = bc.target  # 获取数据集标签
+    pd_bc = pd.DataFrame(bc['data'], columns=bc['feature_names']) # 数据集转换DataFrame
+    bc_X = bc['data']  # 获取实际数据集
+    bc_y = bc['target']  # 获取数据集标签
     print(bc_y)
     bc_descr = pd_bc.info()  # 获取医疗机构乳腺癌数据内部信息
     print(bc_descr)
