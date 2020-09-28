@@ -23,6 +23,7 @@ if __name__ == "__main__":
     pd_bc = pd.DataFrame(bc.data, columns=bc.feature_names) # 数据集转换DataFrame
     bc_X = bc.data  # 获取实际数据集
     bc_y = bc.target  # 获取数据集标签
+    print(bc_y)
     bc_descr = pd_bc.info()  # 获取医疗机构乳腺癌数据内部信息
     print(bc_descr)
     train_X, test_X, train_y, test_y = train_test_split(bc_X, bc_y,train_size=0.8)
