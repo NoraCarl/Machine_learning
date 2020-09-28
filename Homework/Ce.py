@@ -25,6 +25,7 @@ Dv = pd.get_dummies(Dv_data)
 print(Dv.head(5))
 new_data = pd.concat([x_data, Dv], axis=1)
 new_data.drop(columns=['Sex'], inplace=True) # 删除Sex列
+print(new_data)
 # 划分训练集和测试集
 x_data, x_test, y_data, y_test = train_test_split(new_data, x_target, test_size=0.2)
 
@@ -41,5 +42,6 @@ reslut = clf.predict(x_test_data)
 print(reslut[:10])
 
 # Svm准确率分析
+clf.score(x_train_data,x_test_data)
 print('训练集准确率: {}'.format(accuracy_score(y_data, clf.predict(x_train_data))))
 print('测试集准确率: {}'.format(accuracy_score(y_test, clf.predict(x_test_data))))
